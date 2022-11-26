@@ -1,0 +1,68 @@
+.intro-page-container {
+  display: flex;
+  height: 90vh;
+  width: 90vw;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 1rem;
+  padding-bottom: 2rem;
+  margin: 0 auto;
+  font-family: sans-serif;
+  margin-top: 2rem;
+}
+.intro-page-container .left-side {
+  width: 50%;
+}
+.intro-page-container .left-side .left-side-inner {
+  height: 90vh;
+  width: 50%;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.intro-page-container .left-side .left-side-inner span,
+.intro-page-container .left-side .left-side-inner .colored-h2 {
+  color: #6c63ff;
+}
+.intro-page-container .right-side {
+  width: 60%;
+}
+.intro-page-container .right-side .intro-img-container {
+  margin-top: 7rem;
+}
+
+.heading h1 {
+  font-size: 3.2rem;
+}
+
+.para h2 {
+  margin: 0;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+}
+
+.joinNow-btn {
+  width: 50%;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  color: #fff;
+  background-color: #6c63ff;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+  border: none;
+}
+
+.footer a {
+  text-decoration: none;
+  color: #6c63ff;
+  cursor: pointer;
+}
+.footer a:hover {
+  text-decoration: underline;
+}/*# sourceMappingURL=main.css.map */
