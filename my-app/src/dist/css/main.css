@@ -58,6 +58,22 @@
   border: none;
 }
 
+.signOut-btn,
+.signIn-btn {
+  margin-top: 1.5rem;
+  color: #fff;
+  background-color: #6c63ff;
+  padding: 0.5em 1em;
+  cursor: pointer;
+  border-radius: 0.5rem;
+}
+
+.signOut-btn-container {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 1.5rem;
+}
+
 .footer a {
   text-decoration: none;
   color: #6c63ff;
@@ -65,6 +81,13 @@
 }
 .footer a:hover {
   text-decoration: underline;
+}
+
+.takeNote-btn {
+  color: #fff;
+  background-color: #6c63ff;
+  padding: 0.5em;
+  cursor: pointer;
 }
 
 .login-navbar {

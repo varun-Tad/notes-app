@@ -40,9 +40,10 @@
 
   .right-side {
     width: 60%;
-
+    // border: 1px solid black;
     .intro-img-container {
       margin-top: 7rem;
+      //   border: 1px solid pink;
     }
   }
 }
@@ -71,6 +72,22 @@
   border: none;
 }
 
+.signOut-btn,
+.signIn-btn {
+  margin-top: 1.5rem;
+  color: $color-white;
+  background-color: $primary-color;
+  padding: 0.5em 1em;
+  cursor: pointer;
+  border-radius: 0.5rem;
+}
+
+.signOut-btn-container {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 1.5rem;
+}
+
 .footer {
   a {
     text-decoration: none;
@@ -81,4 +98,11 @@
   a:hover {
     text-decoration: underline;
   }
+}
+
+.takeNote-btn {
+  color: $color-white;
+  background-color: $primary-color;
+  padding: 0.5em;
+  cursor: pointer;
 }

@@ -2,10 +2,16 @@ import React, { useState } from "react";
 import axios from "axios";
 import Button from "../../Components/Button";
 import { useNavigate } from "react-router-dom";
-import { toast } from "react-toastify";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { useDispatch, useSelector } from "react-redux";
+import { changeUser, printUser } from "../../features/user/userSlice";
 
 const LoginPage = () => {
   let navigate = useNavigate();
+  let dispatch = useDispatch();
+
+  const [pwdType, setPwdType] = useState(false);
 
   const defaultFormFields = {
     email: "",
@@ -22,27 +28,25 @@ const LoginPage = () => {
   const loginSubmitHandler = async (event) => {
     event.preventDefault();
 
-    console.log("Yes");
-    console.log(email);
-
     try {
       const response = await axios.post("/api/auth/login", {
         email: email,
         password: password,
       });
-      console.log(response);
 
       localStorage.setItem("notes-login-token", response.data.encodedToken);
       resetFormFields();
       navigate("/");
+      dispatch(changeUser(true));
+
       toast.success("You are logged in !", {
         autoClose: 3000,
       });
     } catch (err) {
-      //   toast.error("Error in login.Try again !", {
-      //     autoClose: 3000,
-      //   });
       console.log(err);
+      toast.error("Error in login.Try again !", {
+        autoClose: 3000,
+      });
     }
   };
 
@@ -51,13 +55,21 @@ const LoginPage = () => {
     setFormFields({ ...formFields, [name]: value });
   };
 
+  const signUp = () => {
+    navigate("/SignUp");
+  };
+
+  const showPwdHandler = () => {
+    setPwdType(!pwdType);
+  };
+
   return (
     <>
       <nav className="login-navbar">
         <h1>
-          Take <span>Note</span>
+          Take<span>Note</span>
         </h1>
-        <p>Sign Up</p>
+        <p onClick={signUp}>Sign Up</p>
       </nav>
       <div className="login-page">
         <form className="login-form" onSubmit={loginSubmitHandler}>
@@ -83,7 +95,7 @@ const LoginPage = () => {
             <label htmlFor="password"></label>
             <input
               className="basic-inp-box"
-              type="password"
+              type={pwdType ? "text" : "password"}
               placeholder="Enter password..."
               name="password"
               value={password}
@@ -91,11 +103,14 @@ const LoginPage = () => {
               onChange={handleChange}
             ></input>
             <div>
-              <small className="showPwd-text">show password</small>
+              <small onClick={() => showPwdHandler()} className="showPwd-text">
+                {pwdType ? "hide password" : "show password"}
+              </small>
             </div>
           </div>
-          <Button classname={"login-btn"} text={"Login"} btnType={"submit"} />
+          <Button classname="login-btn" text="Login" btnType="submit" />
         </form>
+        <ToastContainer />
       </div>
     </>
   );
