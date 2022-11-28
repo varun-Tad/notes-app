@@ -32,6 +32,10 @@ const Intropage = () => {
     navigate("/Login");
   };
 
+  const takeNoteBtnHandler = () => {
+    navigate("/Home");
+  };
+
   return (
     <>
       <div className="intro-page-container">
@@ -50,7 +54,9 @@ const Intropage = () => {
                 Manage your daily tasks and workflow in a modern way and boost
                 your efficiency without any efforts.
               </p>
-              <button className="takeNote-btn">Take notes ➜</button>
+              <button onClick={takeNoteBtnHandler} className="takeNote-btn">
+                Take notes ➜
+              </button>
             </div>
 
             <div className="footer">
