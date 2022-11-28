@@ -1,12 +1,13 @@
 .intro-page-container {
   display: flex;
-  height: 100vh;
-  width: 90vw;
+  height: 90vh;
+  width: 95vw;
   border-radius: 1rem;
   padding-bottom: 2rem;
   margin: 0 auto;
   font-family: sans-serif;
   margin-top: 2rem;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 .intro-page-container .left-side {
   width: 50%;
@@ -155,4 +156,62 @@
 
 .showPwd-text:hover {
   text-decoration: underline;
+}
+
+.home-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  padding: 1rem;
+}
+.home-navbar .hamburger-menu {
+  font-size: 1.3em;
+  cursor: pointer;
+}
+.home-navbar .mid {
+  display: flex;
+  margin-right: 20rem;
+  gap: 1rem;
+  align-items: center;
+  font-size: 1.3em;
+}
+.home-navbar .mid div {
+  display: flex;
+  gap: 1rem;
+}
+.home-navbar .mid div .input-search {
+  width: 20rem;
+  padding: 0.3em;
+}
+.home-navbar .mid div .btn-search {
+  width: 3rem;
+  cursor: pointer;
+  color: #fff;
+  background-color: #6c63ff;
+}
+
+.list-view {
+  cursor: pointer;
+}
+
+.center {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.side-bar {
+  border: 1px solid black;
+  height: 100vh;
+  padding-left: 1rem;
+  width: 15%;
+}
+.side-bar .sideBar-item {
+  display: flex;
+  font-size: 1.1rem;
+  align-items: center;
+  gap: 1rem;
+}
+.side-bar .sideBar-item p {
+  font-size: 1.2em;
 }/*# sourceMappingURL=main.css.map */
