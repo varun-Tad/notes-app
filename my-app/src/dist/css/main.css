@@ -1,8 +1,7 @@
 .intro-page-container {
   display: flex;
-  height: 90vh;
+  height: 100vh;
   width: 90vw;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   border-radius: 1rem;
   padding-bottom: 2rem;
   margin: 0 auto;
@@ -99,6 +98,7 @@
   font-family: sans-serif;
   margin: 0;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  border-bottom: 1px solid black;
 }
 .login-navbar p {
   cursor: pointer;
@@ -115,10 +115,10 @@
 .login-page {
   box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
   border-radius: 1rem;
-  width: 30%;
+  width: 50%;
   font-family: sans-serif;
   margin-top: 10rem;
-  margin-left: 40rem;
+  margin-left: 22rem;
   padding-bottom: 2rem;
 }
 .login-page .login-form {
