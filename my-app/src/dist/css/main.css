@@ -198,20 +198,89 @@
 .center {
   display: flex;
   flex-wrap: wrap;
+  gap: 2rem;
 }
 
-.side-bar {
-  border: 1px solid black;
+.side-bar-show {
+  border-right: 1px solid black;
   height: 100vh;
   padding-left: 1rem;
-  width: 15%;
+  width: 12%;
+  color: #6c63ff;
+  transition: all 1s ease;
 }
-.side-bar .sideBar-item {
+.side-bar-show .sideBar-item {
   display: flex;
-  font-size: 1.1rem;
+  font-size: 1.2em;
   align-items: center;
   gap: 1rem;
+  margin-top: 1em;
+  cursor: pointer;
 }
-.side-bar .sideBar-item p {
-  font-size: 1.2em;
+.side-bar-show .sideBar-item:hover {
+  text-decoration: underline;
+}
+
+.side-bar-hide {
+  visibility: hidden;
+  transform: translateX(-15rem);
+}
+
+.main-containerBig {
+  padding-left: 2rem;
+  height: 100vh;
+  width: 90vw;
+}
+
+.main-containerSmall {
+  padding-left: 2rem;
+  height: 100vh;
+  width: 80vw;
+}
+
+.inner-main {
+  height: 100vh;
+}
+
+.takeANote-input-container {
+  width: 50%;
+  transform: translateX(50%);
+  margin-top: 2rem;
+}
+.takeANote-input-container .takeANote-input {
+  width: 100%;
+  padding: 1em;
+  outline: none;
+}
+
+.addNote-input-container {
+  width: 50%;
+  transform: translateX(50%);
+  margin-top: 2rem;
+}
+.addNote-input-container .addANote-input {
+  width: 100%;
+  padding: 1em;
+  border-bottom: none;
+  outline: none;
+}
+
+.addANote-input-ext {
+  width: 100%;
+  padding: 1em;
+  border-top: none;
+  outline: none;
+}
+
+.addNote-inp-btns {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+.addNote-inp-btns button {
+  cursor: pointer;
+  color: #fff;
+  background-color: #6c63ff;
+  padding: 0.5em;
+  border-radius: 0.5em;
 }/*# sourceMappingURL=main.css.map */
